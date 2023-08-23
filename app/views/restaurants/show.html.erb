@@ -1,3 +1,10 @@
 <h1><%= @restaurant.name %></h1>
 <h3><%= @restaurant.address %></h3>
 <p><%= @restaurant.category %></p>
+
+<% @reviews.each do |review| %>
+<div class="container">
+<p><%=review.rating%></p>
+<p><%= review.content %></p>
+</div>
+<% end %>
